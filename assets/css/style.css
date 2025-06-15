@@ -15,3 +15,11 @@
     max-width: 1320px;
     margin: 0 auto;
 }
+
+/* Heaser Section */
+header {
+    height: 800px;
+    background: url("../img/banner-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
