@@ -16,10 +16,126 @@
     margin: 0 auto;
 }
 
+.hamburger {
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
 /* Heaser Section */
 header {
     height: 800px;
     background: url("../img/banner-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
+
+    nav {
+        margin: 0 2rem;
+
+        .nav-wrapper {
+            position: relative;
+            height: 200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        .logo {
+
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin-left: 50px;
+
+                a {
+                    color: var(--white);
+                    text-decoration: none;
+                }
+            }
+        }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .hamburger {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        height: auto;
+        padding: 3rem 0;
+
+        nav {
+
+            .nav-wrapper {
+                flex-direction: column;
+                align-items: start;
+                margin: 3rem 0;
+                height: auto;
+
+                .menu.show {
+                    display: flex;
+                }
+
+                .menu {
+                    display: none;
+                    flex-direction: column;
+
+                    li {
+                        margin-left: 0;
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .discount-title {
+        .discount-title-wrapper {
+            color: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .discount-title-box {
+                width: 880px;  /* 880px=55rem*/
+                margin: 0.625rem; /* 10px=0.625rem*/
+                
+                h1 {
+                    font-size: clamp(2rem, 10vw, 6.875rem);
+                    text-transform: uppercase;
+                }
+
+                p {
+                    font-size: clamp(1rem, 10vw, 1.875rem);
+                }
+
+                .discount-btn {
+                    background-color: var(--yellow);
+                    color: var(--black);
+                    max-width: 20rem; /* 320px */
+                    width: 100%;
+                    height: 4rem; /* 65px */
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    text-decoration: none;
+                    border-radius: 0.3rem; /* 5px */
+                    margin-top: 3.75rem; /* 60px */
+                }
+            }
+
+        }
+
+    }
 }
+
